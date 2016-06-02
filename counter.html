@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>counter</title>
+</head>
+<body>
+	<div id="app">
+		<form action="done.html" @submit.prevent="">
+			<button type="submit" @click="updateCount">
+				Increment Counter: {{count}}
+			</button>
+		</form>
+	</div>
+</body>
+<script src="vue.js"></script>
+<script type="text/javascript">
+new Vue({
+	el: '#app',
+	data: {
+		count: 0
+	},
+	methods: {
+		handleIt: function(){
+			alert('Handled!');
+		},
+		updateCount: function(){
+			this.count += 1;
+		}
+	}
+		
+});
+</script>
+</html>

@@ -1,0 +1,30 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>computed properties</title>
+</head>
+<body>
+	<h1>Skill: {{skill}}</h1>
+	<p>
+		<input v-model="points"/>
+	</p>
+</body>
+<script src="vue.js"></script>
+<script type="text/javascript">
+	var vueObject = new Vue({
+		el: 'body',
+		data: {
+			points: 1000
+		},
+		computed: {
+			skill: function(){
+				if(this.points<=100){
+					return 'Beginner';
+				}else{
+					return 'Advanced';
+				}
+			}
+		}
+	});
+</script>
+</html>

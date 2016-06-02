@@ -1,0 +1,14 @@
+{
+  "extends": "standard",
+  "plugins": [
+    "html"
+  ],
+  "globals": {
+    "bridge": true,
+    "chrome": true
+  },
+  "rules": {
+    "arrow-parens": [2, "as-needed"],
+    "standard/object-curly-even-spacing": 0
+  }
+}

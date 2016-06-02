@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>components</title>
+</head>
+<body>
+	<div id="app">
+		<counter subject="likes"></counter>
+		<counter subject="dislikes"></counter>
+	</div>
+
+	<template id="counter-template">
+		<h1>{{subject}}</h1>
+		<button @click="count += 1">{{count}}</button>
+	</template>
+</body>
+<script src="vue.js"></script>
+<script type="text/javascript">
+Vue.component('counter',{
+	template: '#counter-template',
+	props: ['subject'],
+	data: function(){
+		return {count: 0};
+	}
+	
+});
+
+new Vue({
+	el: '#app',
+});
+</script>
+</html>

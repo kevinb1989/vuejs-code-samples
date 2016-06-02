@@ -1,0 +1,19 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>lists</title>
+	<link rel="stylesheet" type="text/css" href="css/lists-styles.css">
+</head>
+<body>
+	<div id="app">
+		<ul>
+			<li :class="{completed: task.completed}" 
+				v-for="task in tasks"
+				@click="toggleCompletedFor(task)"
+			>{{task.body}}</li>
+		</ul>
+	</div>
+</body>
+<script src="vue.js"></script>
+<script src="js/main.js"></script>
+</html>

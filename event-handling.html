@@ -1,0 +1,26 @@
+<html>
+<head>
+	<title>event-handling</title>
+</head>
+<body>
+	<div id="app">
+		<form action="done.html" @submit.prevent="handleIt">
+			<button type="submit">
+				Submit Me
+			</button>
+		</form>
+	</div>
+</body>
+<script src="vue.js"></script>
+<script type="text/javascript">
+new Vue({
+	el: '#app',
+	methods: {
+		handleIt: function(){
+			alert('Handled!');
+		}
+	}
+		
+});
+</script>
+</html>
